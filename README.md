@@ -2,11 +2,26 @@
 6. Simulation of Hamming and Shannon-Fano Code
 
 # AIM
+To apply Huffman and Shannon-Fano to the discrete memoryless source with symbols and statistics {0.125, 0.0625, 0.25, 0.0625, 0.125, 0.125, 0.25} using python.
 
 # SOFTWARE REQUIRED
+Google Colab
 
 # ALGORITHMS
-
+   1. Input the number of samples (n) and for each sample:
+      - Enter the probability of the sample (p[i]).
+      - Enter the length of the codeword (lk[i]).
+   2. Calculate Average Length (L):
+      - Sum the product of each probability and its corresponding codeword length.
+   3. Calculate Entropy (hs):
+      - Sum the entropy for each sample using p[i] * log2(1 / p[i]).
+   4. Calculate Efficiency (eff):
+      - Divide entropy (hs) by the average codeword length (L).
+   5. Calculate Redundancy (red):
+      - Subtract efficiency from 1.
+   6. Calculate Variance (var):
+      - Sum the variance for each sample using p[i] * (lk[i] - L)^2.
+   7. Output the values for average codeword length (L), entropy (hs), efficiency (eff), redundancy (red), and variance (var).
 
 # PROGRAM
     import numpy as np
@@ -55,3 +70,4 @@
 
  
 # RESULT
+Thus, the Huffman and Shannon-Fano coding techniques have been successfully applied to the given source. The average codeword length, entropy, efficiency, redundancy, and variance have been computed.
